@@ -21,7 +21,7 @@ void sendchar(char c, int pid)
 		else
 			kill(pid, SIGUSR1);
 		counter = counter >> 1;
-		usleep(50);
+		usleep(500);
 	}
 }
 

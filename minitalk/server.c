@@ -41,7 +41,7 @@ int main()
     count = 0;
     pid = getpid();
     m = 0;   
-    printf("SERVER AKTIV\n");
+    printf("SERVER: \033[0;32mAKTIV\n\033[0m");
     printf("PID: %d\n", pid);
     fflush(stdout);
 
