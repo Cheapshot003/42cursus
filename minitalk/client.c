@@ -4,7 +4,7 @@
 
 void usage()
 {
-	ft_putstr_fd("lak du musst so machen: client [PID] [Nachricht]\n", 1);
+	ft_putstr_fd("bis du deppat oda wos?: client [PID] [Nachricht]\n", 1);
 	exit(0);
 }
 
@@ -20,16 +20,19 @@ void sendchar(char c, int pid)
 		else
 			kill(pid, SIGUSR1);
 		counter = counter >> 1;
-		usleep(500);
+		usleep(850);
 	}
 }
 
 void sendstr(char* str, int pid)
 {
-	while (*str)
+	int	i;
+
+	i = 0;
+	while (str[i])
 	{
-		sendchar(*str, pid);
-		str++;
+		sendchar(str[i], pid);
+		i++;
 	}
 }
 
@@ -41,5 +44,4 @@ int main(int argc, char** argv)
 		usage();
 	pid = ft_atoi(argv[1]);
 	sendstr(argv[2], pid);
-	
 }

@@ -18,7 +18,7 @@ void sig1(char *m, int *count)
 {
     *m = *m << 1;
     *m = *m + 1;
-    *count++;
+    (*count)++;
     if (*count == 8)
     {
         ft_putchar_fd(*m, 1);
@@ -29,13 +29,13 @@ void sig1(char *m, int *count)
 
 void sig0(char *m, int *count)
 {   
-    *count++;
+    (*count)++;
     *m = *m << 1;
     if (*count == 8)
     {
         ft_putchar_fd(*m, 1);
-        m = 0;
-        count = 0;
+        *m = 0;
+        *count = 0;
     }
 }
 
@@ -50,7 +50,7 @@ int main()
     pid = getpid();
     m = 0;   
     ft_putstr_fd("SERVER: \033[0;32mAKTIV\n\033[0m", 1);
-    ft_putstr_fd("PID: %d", 1);
+    ft_putstr_fd("PID: ", 1);
     ft_putnbr_fd(pid, 1);
     ft_putstr_fd("\n", 1);
     while (1)
