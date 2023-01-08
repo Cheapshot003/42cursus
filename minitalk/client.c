@@ -24,9 +24,9 @@ void sendchar(char c, int pid)
 	}
 }
 
-void sendstr(char* str, int pid)
+void sendstr(char *str, int pid)
 {
-	int	i;
+	int i;
 
 	i = 0;
 	while (str[i])
@@ -36,10 +36,10 @@ void sendstr(char* str, int pid)
 	}
 }
 
-int main(int argc, char** argv)
+int main(int argc, char **argv)
 {
 	int pid;
-	
+
 	if (argc != 3)
 		usage();
 	pid = ft_atoi(argv[1]);

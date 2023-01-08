@@ -11,7 +11,7 @@ void sighandler(int signal1)
         sig = 1;
     else if (signal1 == SIGUSR2)
         sig = 2;
-    return ;
+    return;
 }
 
 void sig1(char *m, int *count)
@@ -28,7 +28,7 @@ void sig1(char *m, int *count)
 }
 
 void sig0(char *m, int *count)
-{   
+{
     (*count)++;
     *m = *m << 1;
     if (*count == 8)
@@ -45,10 +45,10 @@ int main()
     char m;
     pid_t pid;
 
-    count = 0;   
+    count = 0;
     sig = 0;
     pid = getpid();
-    m = 0;   
+    m = 0;
     ft_putstr_fd("SERVER: \033[0;32mAKTIV\n\033[0m", 1);
     ft_putstr_fd("PID: ", 1);
     ft_putnbr_fd(pid, 1);
@@ -59,8 +59,6 @@ int main()
             sig0(&m, &count);
         else if (sig == 2)
             sig1(&m, &count);
-        
-        
         signal(SIGUSR1, sighandler);
         signal(SIGUSR2, sighandler);
         pause();
