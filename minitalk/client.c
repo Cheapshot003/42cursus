@@ -4,9 +4,8 @@
 
 void usage()
 {
-	printf("lak du musst so machen: client [PID] [Nachricht]\n");
+	ft_putstr_fd("lak du musst so machen: client [PID] [Nachricht]\n", 1);
 	exit(0);
-
 }
 
 void sendchar(char c, int pid)
@@ -34,15 +33,13 @@ void sendstr(char* str, int pid)
 	}
 }
 
-
-
 int main(int argc, char** argv)
 {
 	int pid;
 	
 	if (argc != 3)
 		usage();
-	pid = atoi(argv[1]);
+	pid = ft_atoi(argv[1]);
 	sendstr(argv[2], pid);
 	
 }
