@@ -4,7 +4,7 @@
 #include <unistd.h>
 
 char sig;
-
+  
 void sighandler(int signal1)
 {
     if (signal1 == SIGUSR1)
