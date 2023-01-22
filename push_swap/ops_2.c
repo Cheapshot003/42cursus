@@ -2,6 +2,7 @@
 
 void ra(s_stack *sk)
 {
+    write(1, "ra\n", 4);
     int temp;
     int i;
 
@@ -17,6 +18,7 @@ void ra(s_stack *sk)
 
 void rb(s_stack *sk)
 {
+    write(1, "rb\n", 4);
     int temp;
     int i;
 
@@ -32,6 +34,7 @@ void rb(s_stack *sk)
 
 void rr(s_stack *sk)
 {
+    write(1, "rr\n", 4);
     ra(sk);
     rb(sk);
 }

@@ -30,7 +30,10 @@ void rr(s_stack *sp);
 void rra(s_stack *sp);
 void rrb(s_stack *sp);
 void rrr(s_stack *sp);
-
+//utils
+int	check_dup(int *list, int size);
+int	*fetch_numbers(int argc, char **args);
+int check_num(char **args, int size);
 
 
 

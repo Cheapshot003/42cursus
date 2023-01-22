@@ -2,6 +2,7 @@
 
 void sa(s_stack *sk)
 {
+    write(1, "sa\n", 4);
     int temp;
     int temp2;
 
@@ -13,6 +14,7 @@ void sa(s_stack *sk)
 
 void sb(s_stack *sk)
 {
+    write(1, "sb\n", 4);
     int temp;
     int temp2;
 
@@ -24,16 +26,19 @@ void sb(s_stack *sk)
 
 void ss(s_stack *sk)
 {
+    write(1, "ss\n", 4);
     sa(sk);
     sb(sk);
 }
 
 void pa(s_stack *sk)
 {
+    write(1, "pa\n", 4);
     push_a(sk, pop_b(sk));
 }
 
 void pb(s_stack *sk)
 {
+    write(1, "pb\n", 4);
     push_b(sk, pop_a(sk));
 }
