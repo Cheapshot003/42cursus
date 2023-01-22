@@ -6,11 +6,11 @@
 /*   By: ole <ole@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/22 10:14:10 by ole               #+#    #+#             */
-/*   Updated: 2023/01/22 10:51:47 by ole              ###   ########.fr       */
+/*   Updated: 2023/01/22 11:09:49 by ole              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
+#include "../includes/push_swap.h"
 
 int	*fetch_numbers(int argc, char **args)
 {
